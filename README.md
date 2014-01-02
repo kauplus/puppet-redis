@@ -4,15 +4,26 @@ Redis module for Puppet
 How to use
 -----------------------
 
-1. In your modules directory (eg, /path/to/project/puppet/modules/), run:
+1. In your project directory, run:
 
-        git submodule add https://github.com/kauplus/puppet-redis.git redis
+        git submodule add https://github.com/kauplus/puppet-redis.git puppet/modules/redis
 
 2. In your manifest file, include:
 
         class { redis: }
 
 3. Provision your machine.
+
+
+4. Reboot your machine OR manually start Redis with `sudo service redis-server start`.
+
+5. Check that it worked.
+
+        # Check version.
+        redis-server --version
+
+        # Check that it's running.
+        sudo service redis-server status
 
 Redis version
 -----------------------
